@@ -1682,14 +1682,14 @@
 		text-decoration: none;
 	}
 
-		a:hover {
+		/*a:hover {
 			border-bottom-color: transparent;
 			color: #9bf1ff !important;
 		}
 
 		a:active {
 			color: #53e3fb !important;
-		}
+		}*/
 
 	strong, b {
 		color: #ffffff;
@@ -2175,13 +2175,13 @@
 		transition: background-color 0.2s ease-in-out;
 	}
 
-	a.icon.alt:hover:before {
+	/*a.icon.alt:hover:before {
 		background-color: #6fc3df;
 	}
 
 	a.icon.alt:active:before {
 		background-color: #37a6cb;
-	}
+	}*/
 
 /* Image */
 
@@ -2723,9 +2723,9 @@
 				font-size: 1.75em;
 			}
 
-				.tiles article h3 a:hover {
+				/*.tiles article h3 a:hover {
 					color: inherit !important;
-				}
+				}*/
 
 			.tiles article .link.primary {
 				border: 0;
@@ -2765,9 +2765,9 @@
 				z-index: 1;
 			}
 
-			.tiles article:hover:before {
+			/*.tiles article:hover:before {
 				opacity: 0;
-			}
+			}*/
 
 			.tiles article.is-transitioning {
 				-moz-transform: scale(0.95);
@@ -2786,27 +2786,28 @@
 			}
 
 			.tiles article:nth-child(6n - 5):before {
-				background-color: #6fc3df;
+				/*background-color: #6fc3df;*/
 			}
 
 			.tiles article:nth-child(6n - 4):before {
-				background-color: #8d82c4;
+                /**/
+				/*background-color: #8d82c4;*/
 			}
 
 			.tiles article:nth-child(6n - 3):before {
-				background-color: #ec8d81;
+				/*background-color: #ec8d81;*/
 			}
 
 			.tiles article:nth-child(6n - 2):before {
-				background-color: #e7b788;
+				/*background-color: #e7b788;*/
 			}
 
 			.tiles article:nth-child(6n - 1):before {
-				background-color: #8ea9e8;
+				/*background-color: #8ea9e8;*/
 			}
 
 			.tiles article:nth-child(6n):before {
-				background-color: #87c5a4;
+				/*background-color: #87c5a4;*/
 			}
 
 		@media screen and (max-width: 1280px) {
@@ -3914,3 +3915,28 @@
 			opacity: 1;
 			visibility: visible;
 		}
+
+
+.my1 {
+    background-image:url("../../Gym photos for website/IMG_5553.jpg") !important
+}
+
+.my2 {
+    background-image:url("../../Gym photos for website/IMG_5548.jpg") !important
+}
+
+.my3 {
+    background-image:url("../../Gym photos for website/IMG_5555.jpg") !important
+}
+
+.my4 {
+    background-image:url("../../Gym photos for website/IMG_5558.jpg") !important
+}
+
+.my5 {
+    background-image:url("../../Gym photos for website/IMG_4594.jpg") !important
+}
+
+.my6 {
+    background-image:url("../../Gym photos for website/IMG_4594.jpg") !important
+}
