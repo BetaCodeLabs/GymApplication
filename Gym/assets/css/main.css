@@ -3443,9 +3443,9 @@
 				}
 
 		#banner.major {
-			height: 75vh;
+			height: 100vh;
 			min-height: 30em;
-			max-height: 50em;
+			max-height:100vh;
 		}
 
 			#banner.major.alt {
@@ -3519,13 +3519,13 @@
 					display: block;
 				}
 
-					#banner > .inner .content > * {
+					#banner > .inner .content > * { 
 						margin-left: 0;
 						margin-bottom: 2em;
 					}
 
 				#banner.major {
-					height: auto;
+					height: 100vh;
 					min-height: 0;
 					max-height: none;
 				}
