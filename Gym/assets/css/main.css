@@ -1171,7 +1171,9 @@
 		.\-1u\28small\29 {
 			margin-left: 8.33333%;
 		}
-
+        #header a.sm-links{
+            display:none;
+        }
 	}
 
 	@media screen and (max-width: 480px) {
@@ -1386,6 +1388,7 @@
 		.\-1u\28xsmall\29 {
 			margin-left: 8.33333%;
 		}
+       
 
 	}
 
