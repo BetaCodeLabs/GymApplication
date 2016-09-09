@@ -309,6 +309,8 @@
     <Content Include="lightcase\src\scss\components\modules\_overlay.scss" />
     <Content Include="lightcase\src\scss\components\_settings.scss" />
     <Content Include="lightcase\src\scss\lightcase.scss" />
+    <Content Include="assets\fonts\ufonts.com_brush-script-regular.ttf" />
+    <Content Include="assets\fonts\ufonts.com_brush-script-regular.woff" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
