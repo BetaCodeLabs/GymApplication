@@ -12,6 +12,9 @@
     <link rel="stylesheet" href="~/assets/css/main.css" />
     <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
     <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link href="~/owl/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="~/owl/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="~/lightcase/src/css/lightcase.css" rel="stylesheet" />
     <style>
         html, body {
             height: 100%;
@@ -33,11 +36,11 @@
         <header id="header" class="alt">
             <a href="/Home/Index" class="logo">
 
-                <img class="logo" src="~/Gym photos for website/Bodykraft logo.png" />
+                <img class="logo" src="~/Gym/Bodykraft logo.png" />
                 @*<strong>BodyKraft</strong> <span>Gym</span>*@
             </a>
-            <a class="logo sm-links" href="/Home/Index"><span>Home</span></a> 
-            <a class="logo sm-links" href="#one"><span>Gallery</span></a> 
+            <a class="logo sm-links" href="/Home/Index"><span>Home</span></a>
+            <a class="logo sm-links" href="#one"><span>Gallery</span></a>
             <a class="logo sm-links" href="#one"><span>Schedule</span></a>
             <a class="logo sm-links"><span>About Us</span></a>
             <a class="logo sm-links"><span>Contact</span></a>
@@ -85,7 +88,7 @@
 
                     <h1>
                         <a href="/Home/Index">
-                            <img style="height:3.4%;width:3.4%" src="~/Gym photos for website/Bodykraft Logo.jpg" />
+                            <img style="height:3.4%;width:3.4%" src="~/Gym/Bodykraft Logo.jpg" />
                         </a>
                         Welcome to our website
                     </h1>
@@ -107,12 +110,28 @@
 
             <!-- One -->
             <section id="one" class="tiles">
-                <article class="my1">
-                    <a href="landing.html" class="link"></a>
-                </article>
-                <article class="my2"></article>
-                <article class="my3"></article>
-                <article class="my4"></article>
+                <div class="inner">
+                    <div id="owl-demo">
+                        <div class="item">
+                            <a href="~/Gym/IMG_5548.jpg" data-rel="lightcase:myCollection"><img src="~/Gym/IMG_5548.jpg"  /></a>
+                        </div>
+                        <div class="item">
+                            <a href="~/Gym/IMG_5553.jpg" data-rel="lightcase:myCollection"><img src="~/Gym/IMG_5553.jpg"  /></a>
+                        </div>
+                        <div class="item">
+                            <a href="~/Gym/IMG_5555.jpg" data-rel="lightcase:myCollection"><img src="~/Gym/IMG_5555.jpg"  /></a>
+                        </div>
+                        <div class="item">
+                            <a href="~/Gym/IMG_5558.jpg" data-rel="lightcase:myCollection"><img src="~/Gym/IMG_5558.jpg"  /></a>
+                        </div>
+                    </div>
+                </div>
+                @*<article class="my1">
+                        <a href="landing.html" class="link"></a>
+                    </article>
+                    <article class="my2"></article>
+                    <article class="my3"></article>
+                    <article class="my4"></article>*@
             </section>
             <!-- Two -->
             <section id="two">
@@ -121,7 +140,7 @@
                         <h2>About Us</h2>
                     </header>
                     <p>
-                        <span class="image left"><img src="~/Gym photos for website/IMG_4594.jpg" /></span>
+                        <span class="image left"><img src="~/Gym/IMG_4594.jpg" /></span>
                         <b>Bodykraft</b> gym was established in <strong>2000</strong>.
                     </p>
                     <p>It was conceived by Martial arts Police instructor Donald Melville. Initially the gym was to be solely utilized for his police trainees. However, since this was the only gym in the vicinity, people were impatiently eager to avail its facilities. This persuaded Donald to oblige.</p>
@@ -151,8 +170,8 @@
                             <thead>
                                 <tr>
                                     @*<th>Name</th>
-                                    <th>Description</th>
-                                    <th>Price</th>*@
+                                        <th>Description</th>
+                                        <th>Price</th>*@
                                 </tr>
                             </thead>
                             <tbody>
@@ -176,14 +195,15 @@
                             </tbody>
                             <tfoot>
                                 @*<tr>
-                                    <td colspan="2"></td>
-                                    <td>100.00</td>
-                                </tr>*@
+                                        <td colspan="2"></td>
+                                        <td>100.00</td>
+                                    </tr>*@
                             </tfoot>
                         </table>
                     </div>
-                    <p><b>*Note-</b> Males are not allowed to enter the gym premises during the specified ladies batch.
-</p>
+                    <p>
+                        <b>*Note-</b> Males are not allowed to enter the gym premises during the specified ladies batch.
+                    </p>
                 </div>
             </section>
         </div>
@@ -218,9 +238,11 @@
                             <span class="icon alt fa-home"></span>
                             <h3>Address</h3>
                             <span>
-                                <span>168-B, Radhakrishna Society,<br /> Sahajanand Road Akota,
-                                 <br /> Vadodara 390020,
-                                <br />Gujarat.</span>
+                                <span>
+                                    168-B, Radhakrishna Society,<br /> Sahajanand Road Akota,
+                                    <br /> Vadodara 390020,
+                                    <br />Gujarat.
+                                </span>
                             </span>
                         </div>
                     </section>
@@ -258,14 +280,16 @@
     <script src="~/assets/js/main.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6pGLJgD_fz15Jg0mHgve8UqgCOdwawhs&callback=initMap"
             async defer></script>
+    <script src="~/owl/owl-carousel/owl.carousel.js"></script>
+    <script src="~/lightcase/src/js/lightcase.js"></script>
     <script>
-      //var map;
-      //function initMap() {
-      //  map = new google.maps.Map(document.getElementById('map'), {
-      //    center: {lat: -34.397, lng: 150.644},
-      //    zoom: 8
-      //  });
-      //}
+        //var map;
+        //function initMap() {
+        //  map = new google.maps.Map(document.getElementById('map'), {
+        //    center: {lat: -34.397, lng: 150.644},
+        //    zoom: 8
+        //  });
+        //}
         var geocoder;
         var map;
         var address = "168-B, Radhakrishna Society, Sahajanand Road, Akota, Akota, Vadodara, Gujarat 390020";
@@ -314,9 +338,26 @@
                     }
                 });
             }
+
+            $("#owl-demo").owlCarousel({
+
+                autoPlay: 2000, //Set AutoPlay to 3 seconds
+                pagination: true,
+                items: 3,
+                itemsScaleUp: true,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+
+            });
+
+            $('a[data-rel^=lightcase]').lightcase();
         }
         google.maps.event.addDomListener(window, 'load', initialize);
-      </script>
+
+        //$(document).ready(function () {
+        //    $("#owl-example").owlCarousel();
+        //});
+    </script>
 
 </body>
 </html>

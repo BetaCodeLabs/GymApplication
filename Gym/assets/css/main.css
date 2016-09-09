@@ -3943,3 +3943,14 @@
 .my6 {
     background-image:url("../../Gym photos for website/IMG_4594.jpg") !important
 }
+
+
+#owl-demo .item{
+  margin: 5px;
+}
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit:cover;
+}
