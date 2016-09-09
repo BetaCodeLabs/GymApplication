@@ -961,6 +961,8 @@
 
 	@media screen and (max-width: 736px) {
 
+   
+
 		.row > * {
 			padding: 0 0 0 1.25em;
 		}
@@ -2830,6 +2832,10 @@
 				width: 50% !important;
 			}
 
+                 #map{
+            height:300px !important;
+            width:100%;
+        }
 		}
 
 		@media screen and (max-width: 736px) {
@@ -2969,6 +2975,9 @@
 					align-items: flex-end;
 				}
 
+
+
+              
 		@media screen and (max-width: 1680px) {
 
 			.spotlights > section > .image {
@@ -3954,3 +3963,19 @@
   height: 300px;
   object-fit:cover;
 }
+
+  a.lightcase-icon-prev, a.lightcase-icon-next, a.lightcase-icon-close{
+                    border:none;
+                }
+
+   #header nav{
+          display:none;
+      }
+  
+
+  @media screen and (max-width:736px){
+
+      #header nav{
+          display:block;
+      }
+  }
