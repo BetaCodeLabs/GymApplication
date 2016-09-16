@@ -1,42 +1,196 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <title>BodyKraft Gym</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="~/assets/css/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <link href="~/owl/owl-carousel/owl.carousel.css" rel="stylesheet" />
+    <link href="~/owl/owl-carousel/owl.theme.css" rel="stylesheet" />
+    <link href="~/lightcase/src/css/lightcase.css" rel="stylesheet" />
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        #map {
+            height: 100%;
+        }
+    </style>
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+<body onload="initialize()">
+    <!-- Wrapper -->
+    <div id="wrapper">
+        <!-- Header -->
+        <header id="header" class="alt">
+            <a href="/Home/Index" class="logo">
+                <img class="logo" src="~/Gym/Bodykraft logo.png" />
+            </a>
+            <a class="logo sm-links" href="/Home/Index"><span>Home</span></a>
+            @if (ViewBag.IsHome)
+            {
+                <a class="logo sm-links" href="#one"><span>Gallery</span></a>
+                <a class="logo sm-links" href="#three"><span>Schedule</span></a>
+                <a class="logo sm-links" href="#two"><span>About Us</span></a>
+            }
+            else
+            {
+                <a class="logo sm-links" href="#one"><span>Gallery</span></a>
+            }
+            <a class="logo sm-links" href="#contact"><span>Contact</span></a>
+            <nav>
+                <a href="#menu"></a>
+            </nav>
+        </header>
+        <!-- Menu -->
+        <nav id="menu">
+            <ul class="links">
+                <li><a href="/Home/Index">Home</a></li>
+                @if (ViewBag.IsHome)
+                {
+                    <li><a href="#one">Gallery</a></li>
+                    <li><a href="#three">Schedule</a></li>
+                    <li><a href="#two">About Us</a></li>
+                }
+                else
+                {
+                    <li><a href="#one">Gallery</a></li>
+                }
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <!--Body Main-->
+        @RenderBody()
+        <!-- Contact -->
+        <section id="contact">
+            <div class="inner">
+                <section style="overflow:hidden">
+                    <header class="major">
+                        <h2>Contact us</h2>
+                    </header>
+                    <div id="map"></div>
+                </section>
+                <section class="split">
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon alt fa-envelope"></span>
+                            <h3>Email</h3>
+                            <a href="#">information@untitled.tld</a>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon alt fa-phone"></span>
+                            <h3>Call us on</h3>
+                            <span>(0265) 2342344</span>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="contact-method">
+                            <span class="icon alt fa-home"></span>
+                            <h3>Address</h3>
+                            <span>
+                                <span>
+                                    168-B, Radhakrishna Society,<br /> Sahajanand Road Akota,
+                                    <br /> Vadodara 390020,
+                                    <br />Gujarat.
+                                </span>
+                            </span>
+                        </div>
+                    </section>
+                </section>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+        </section>
+        <!-- Footer -->
+        <footer id="footer">
+            <div class="inner">
+                <ul class="icons">
+                    <li><a href="#" class="icon alt fa-facebook"><span class="label">Facebook</span></a></li>
+                </ul>
+                <ul class="copyright">
+                    <li>&copy;@DateTime.Now.Year - Betacodelabs</li>
+                    <li>Powered By: <a href="http://www.betacodelabs.com">www.betacodelabs.com</a></li>
                 </ul>
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
     </div>
+    <!-- Scripts -->
+    <script src="~/assets/js/jquery.min.js"></script>
+    <script src="~/assets/js/jquery.scrolly.min.js"></script>
+    <script src="~/assets/js/jquery.scrollex.min.js"></script>
+    <script src="~/assets/js/skel.min.js"></script>
+    <script src="~/assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="~/assets/js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA6pGLJgD_fz15Jg0mHgve8UqgCOdwawhs&callback=initMap"
+            async defer></script>
+    <script src="~/owl/owl-carousel/owl.carousel.js"></script>
+    <script src="~/lightcase/src/js/lightcase.js"></script>
+    <script>
+        var geocoder;
+        var map;
+        var address = "168-B, Radhakrishna Society, Sahajanand Road, Akota, Akota, Vadodara, Gujarat 390020";
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var myOptions = {
+                zoom: 13,
+                center: latlng,
+                mapTypeControl: true,
+                mapTypeControlOptions: {
+                    style: google.maps.MapTypeControlStyle.DROPDOWN_MENU
+                },
+                navigationControl: true,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            };
+            map = new google.maps.Map(document.getElementById("map"), myOptions);
+            if (geocoder) {
+                geocoder.geocode({
+                    'address': address
+                }, function (results, status) {
+                    if (status == google.maps.GeocoderStatus.OK) {
+                        if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+                            map.setCenter(results[0].geometry.location);
+
+                            var infowindow = new google.maps.InfoWindow({
+                                content: '<b style="color:grey">' + address + '</b>',
+                                size: new google.maps.Size(150, 50)
+                            });
+
+                            var marker = new google.maps.Marker({
+                                position: results[0].geometry.location,
+                                map: map,
+                                title: address
+                            });
+                            google.maps.event.addListener(marker, 'click', function () {
+                                infowindow.open(map, marker);
+                            });
+
+                        } else {
+                            alert("No results found");
+                        }
+                    } else {
+                        alert("Geocode was not successful for the following reason: " + status);
+                    }
+                });
+            }
+            $("#owl-demo").owlCarousel({
+                autoPlay: 2000, //Set AutoPlay to 3 seconds
+                pagination: true,
+                items: 3,
+                itemsScaleUp: true,
+                itemsDesktop: [1199, 3],
+                itemsDesktopSmall: [979, 3]
+            });
+            $('a[data-rel^=lightcase]').lightcase();
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </body>
 </html>
